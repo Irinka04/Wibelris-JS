@@ -22,7 +22,13 @@ const closeModal = function () {
 };
 // навешаем слушатель событий
 buttonCard.addEventListener('click', openModal);
-modalСlose.addEventListener('click', closeModal);
+
+modalCart.addEventListener('click', (event) => {
+	const target = event.target;
+	if (target.classList.contains('modal-close') || target === modalCart) {
+		closeModal();
+	}
+});
 // scrol link 
 // получаю ссылки 
 {
