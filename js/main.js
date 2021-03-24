@@ -134,5 +134,10 @@ navigationLink.forEach(function (link) {
 		const field = link.dataset.field;
 		const value = link.textContent;
 		filterCards(field, value);
-	})
-})
+	});
+});
+const lins = document.querySelector('.lins');
+lins.addEventListener('click', function (event) {
+	event.preventDefault();
+	getGoods().then(renderCards);
+});
